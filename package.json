@@ -1,0 +1,23 @@
+{
+  "name": "pract3-pizzeria-Carlos.Ll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolitecnicoDAW/pract3-pizzeria-Carlos.Ll.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolitecnicoDAW/pract3-pizzeria-Carlos.Ll/issues"
+  },
+  "homepage": "https://github.com/PolitecnicoDAW/pract3-pizzeria-Carlos.Ll#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

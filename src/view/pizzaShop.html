@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pizza Shop</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/style/main.css" />
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-9">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col m-3 p-1 our-pizzas shadow rounded">
+                <div class="container-fluid">
+                  <div id="defaultPizzasContainer" class="row"></div>
+                  <div class="row">
+                    <div class="col text-center m-3 ">
+                      <button
+                        id="buttonAddDefaultPizzaToShoppingCart"
+                        class="btn btn-primary"
+                      >
+                        Añadir al carrito
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m-3 p-1 custom-pizza shadow rounded">
+                <h2 class="text-center">Crea tu propia pizza</h2>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col m-3 p-1 shadow rounded cart">
+          <div class="row">
+            <div class="col m-3 p-1 ">
+              <h2 class="text-center">Carrito</h2>
+              <ul
+                class="list-group shopping-cart  overflow-auto"
+                id="shoppingCartContainer"
+              ></ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div id="totalPrice"><h3>Total: 0€</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="../models/pizza.model.js"></script>
+  <script src="../services/pizzaShop.service.js"></script>
+  <script src="../controller/pizzaShop.controller.js"></script>
+  <script src="../services/shoppingCart.service.js"></script>
+  <script src="../view/pizzaShop.view.js"></script>
+  <script src="../app.js"></script>
+</html>

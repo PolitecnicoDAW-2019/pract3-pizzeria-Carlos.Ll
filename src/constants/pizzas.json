@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Margarita",
+    "prices": { "Pequeña": 8, "Mediana": 10, "Grande": 12 },
+    "urlImage": "../../assets/img/margarita.png"
+  },
+  {
+    "name": "Barbacoa",
+    "prices": { "Pequeña": 9, "Mediana": 12, "Grande": 14 },
+    "urlImage": "../../assets/img/barbacoa.png"
+  },
+  {
+    "name": "Carbonara",
+    "prices": { "Pequeña": 10, "Mediana": 14, "Grande": 20 },
+    "urlImage": "../../assets/img/carbonara.png"
+  },
+  {
+    "name": "Pepperoni",
+    "prices": { "Pequeña": 11, "Mediana": 16, "Grande": 25 },
+    "urlImage": "../../assets/img/pepperoni.png"
+  }
+]

@@ -1,0 +1,32 @@
+body,
+html {
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    -20deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(106, 212, 255, 1) 22%,
+    rgba(0, 123, 255, 1) 72%
+  );
+}
+
+.img-thumbnail {
+  height: 25vh;
+}
+
+.our-pizzas,
+.shopping-cart,
+.custom-pizza,
+.total-price,
+.cart {
+  background-color: #ffffff;
+}
+
+.shopping-cart {
+  height: 80vh;
+}
+
+.vertical-align {
+  height: auto;
+  line-height: 5vh;
+}
