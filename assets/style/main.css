@@ -11,7 +11,7 @@ html {
 }
 
 .img-thumbnail {
-  height: 25vh;
+  height: 23vh;
 }
 
 .our-pizzas,
@@ -29,4 +29,8 @@ html {
 .vertical-align {
   height: auto;
   line-height: 5vh;
+}
+
+.ingredients-list {
+  height: 25vh;
 }

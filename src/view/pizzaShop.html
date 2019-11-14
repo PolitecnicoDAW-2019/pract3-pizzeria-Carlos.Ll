@@ -36,7 +36,92 @@
             <div class="row">
               <div class="col m-3 p-1 custom-pizza shadow rounded">
                 <h2 class="text-center">Crea tu propia pizza</h2>
-                <div></div>
+                <div class="row">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col">
+                        <h3 class="text-center">Base</h3>
+                        <div class="row justify-content-center p-4">
+                          <div
+                            class="custom-control custom-radio custom-control-inline"
+                          >
+                            <input
+                              id="Pequeña"
+                              value="8"
+                              name="radioIngredient"
+                              type="radio"
+                              class="custom-control-input"
+                            /><label for="Pequeña" class="custom-control-label"
+                              >Pequeña</label
+                            >
+                          </div>
+                          <div
+                            class="custom-control custom-radio custom-control-inline"
+                          >
+                            <input
+                              id="Mediana"
+                              value="10"
+                              name="radioIngredient"
+                              type="radio"
+                              class="custom-control-input"
+                            /><label for="Mediana" class="custom-control-label"
+                              >Mediana</label
+                            >
+                          </div>
+                          <div
+                            class="custom-control custom-radio custom-control-inline"
+                          >
+                            <input
+                              id="Grande"
+                              value="12"
+                              name="radioIngredient"
+                              type="radio"
+                              class="custom-control-input"
+                            /><label for="Grande" class="custom-control-label"
+                              >Grande</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <h3 class="text-center">Ingredientes</h3>
+                        <div
+                          class="list-group ingredients-list overflow-auto p-4"
+                          id="ingredientsList"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col">
+                        <div class="text-center ">
+                          <ul
+                            id="selectedBase"
+                            class="justify-content-center list-group"
+                          ></ul>
+                        </div>
+                        <ul
+                          id="selectedIngredients"
+                          class="list-group ingredients-list overflow-auto p-4"
+                        ></ul>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col text-center">
+                        <button
+                          id="addCustomPizza"
+                          type="button"
+                          class="btn btn-primary m-5"
+                        >
+                          Añadir al carrito
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -53,7 +138,7 @@
           </div>
           <div class="row">
             <div class="col">
-              <div id="totalPrice"><h3>Total: 0€</h3></div>
+              <div id="totalPrice"><h3>Total: 0.00€</h3></div>
             </div>
           </div>
         </div>

@@ -3,8 +3,8 @@ class ShoppingCart {
     this.cartElements = [];
   }
 
-  addNewPizza(name, price) {
-    const newPizza = new Pizza(name, price);
+  addNewPizza(pizza) {
+    const newPizza = new Pizza(pizza);
     this._isTheSamePizzaInTheCart(newPizza)
       ? this._sumPizzaToCart(newPizza)
       : this._addNewPizzaToCart(newPizza);
