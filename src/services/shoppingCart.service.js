@@ -4,25 +4,30 @@ class ShoppingCart {
   }
 
   addNewPizza(name, price) {
-    //TODO REFACTOR
     const newPizza = new Pizza(name, price);
-    if (this._isTheSamePizzaInTheCart(newPizza)) {
-      this.cartElements = this.cartElements.map(element => {
-        if (element.pizza.name === name) {
-          element.cuantity++;
-          element.pizza.price = newPizza.price * element.cuantity;
-        }
-        return element;
-      });
-    } else {
-      this.cartElements = [
-        ...this.cartElements,
-        {
-          pizza: newPizza,
-          cuantity: 1
-        }
-      ];
-    }
+    this._isTheSamePizzaInTheCart(newPizza)
+      ? this._sumPizzaToCart(newPizza)
+      : this._addNewPizzaToCart(newPizza);
+  }
+
+  _addNewPizzaToCart(newPizza) {
+    this.cartElements = [
+      ...this.cartElements,
+      {
+        pizza: newPizza,
+        cuantity: 1
+      }
+    ];
+  }
+
+  _sumPizzaToCart(newPizza) {
+    this.cartElements = this.cartElements.map(element => {
+      if (element.pizza.name === newPizza.name) {
+        element.cuantity++;
+        element.pizza.price = newPizza.price * element.cuantity;
+      }
+      return element;
+    });
   }
 
   _isTheSamePizzaInTheCart(newPizza) {
@@ -30,22 +35,26 @@ class ShoppingCart {
   }
 
   removePizza(pizzaName) {
-    //TODO REFACTOR
     const cartElement = this._findCartElement(pizzaName);
-    const pizzaPrice = cartElement.pizza.price;
-    if (cartElement.cuantity === 1) {
-      this.cartElements = this.cartElements.filter(
-        ({ pizza }) => pizza.name !== pizzaName
-      );
-    } else {
-      this.cartElements = this.cartElements.map(element => {
-        if (element.pizza.name === pizzaName) {
-          element.pizza.price -= pizzaPrice / element.cuantity;
-          element.cuantity--;
-        }
-        return element;
-      });
-    }
+    cartElement.cuantity === 1
+      ? this._removeCartItem(pizzaName)
+      : this._substractCartItem(cartElement.pizza);
+  }
+
+  _substractCartItem(pizzaToSubstract) {
+    this.cartElements = this.cartElements.map(element => {
+      if (element.pizza.name === pizzaToSubstract.name) {
+        element.pizza.price -= pizzaToSubstract.price / element.cuantity;
+        element.cuantity--;
+      }
+      return element;
+    });
+  }
+
+  _removeCartItem(pizzaName) {
+    this.cartElements = this.cartElements.filter(
+      ({ pizza }) => pizza.name !== pizzaName
+    );
   }
 
   _findCartElement(pizzaName) {
