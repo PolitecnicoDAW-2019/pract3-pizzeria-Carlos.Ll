@@ -1,0 +1,12 @@
+[
+  { "name": "Bacon", "basePrice": 0.25 },
+  { "name": "Champiñones", "basePrice": 0.2 },
+  { "name": "Queso de cabra", "basePrice": 0.3 },
+  { "name": "Jamon serrano", "basePrice": 0.45 },
+  { "name": "Jamon York", "basePrice": 0.1 },
+  { "name": "Cebolla", "basePrice": 0.26 },
+  { "name": "Pepperoni picante", "basePrice": 0.3 },
+  { "name": "Carne picada", "basePrice": 0.1 },
+  { "name": "Pollo", "basePrice": 0.15 },
+  { "name": "Aceitunas negras", "basePrice": 0.05 }
+]
