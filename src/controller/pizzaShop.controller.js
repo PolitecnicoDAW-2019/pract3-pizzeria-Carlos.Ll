@@ -6,7 +6,8 @@ class Controller {
     pizzaShopService.loadDefaultPizzasJSON().then(() => {
       this.view.bindLoadDefaultPizzas(this.handlerLoadDefaultPizzas);
       this.view.bindAddDefaultPizzaToShoppingCart(
-        this.handlerAddDefaultPizzaToShoppingCart
+        this.handlerAddDefaultPizzaToShoppingCart,
+        this.handlerRemoveItemFromShoppingCart
       );
     });
   }
@@ -16,6 +17,12 @@ class Controller {
   };
 
   handlerAddDefaultPizzaToShoppingCart = (name, price) => {
-    return this.shoppingCart.addNewPizza(name, price);
+    this.shoppingCart.addNewPizza(name, price);
+    return this.shoppingCart.getCartElements();
+  };
+
+  handlerRemoveItemFromShoppingCart = pizzaName => {
+    this.shoppingCart.removePizza(pizzaName);
+    return this.shoppingCart.getCartElements();
   };
 }
